@@ -314,9 +314,9 @@ void balanced_kmeans(SMatF* n_X_Xf, SMatF* n_Y_X, VecI& n_Y, vector<_float>& nor
 			normalize_d_vec(centers[i], nr);
 	}
 
-	delete_2d_float(2, nr, centers);
-	delete_2d_float(2, nr, cosines);
-	delete_2d_float(2, nr, centroid_cosines);
+	// delete_2d_float(2, nr, centers);
+	// delete_2d_float(2, nr, cosines);
+	// delete_2d_float(2, nr, centroid_cosines);
 
 	fill(countmap.begin(), countmap.end(), 0);
 }
