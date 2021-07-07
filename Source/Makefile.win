@@ -1,0 +1,16 @@
+INC=/I..\Tools\c++
+CXXFLAGS=/O2
+
+all: xreg_train xreg_predict
+
+xreg_train:
+	cl /EHsc /Fe:xreg_train.exe $(CXXFLAGS) $(INC) xreg_train.cpp xreg.cpp
+
+xreg_predict:
+	cl /EHsc /Fe:xreg_predict.exe $(CXXFLAGS) $(INC) xreg_predict.cpp xreg.cpp
+
+xreg_metric:
+	cl /EHsc /Fe:xreg_metric.exe $(CXXFLAGS) $(INC) xreg_metric.cpp
+
+clean:
+	del /f xreg_train.exe xreg_train.obj xreg_metric.exe xreg_metric.obj xreg_predict.exe xreg_predict.obj xreg.obj
